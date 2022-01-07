@@ -1,0 +1,2 @@
+execute unless data storage luigis_mansion:data current_state.current_data.spawned_money{lavatory_chest:1b} run function luigis_beta_mansion:room/original/chest_coins
+data modify storage luigis_mansion:data current_state.current_data.spawned_money merge value {lavatory_chest:1b}

@@ -1,0 +1,4 @@
+execute if score #mansion_type Selected matches 2 if entity @s[scores={SelectedFrame=2}] in luigis_beta_mansion:original run function luigis_beta_mansion:room/gallery/portrait_battle/remove_blockade/original/study
+execute if score #mansion_type Selected matches 2 if entity @s[scores={SelectedFrame=5}] in luigis_beta_mansion:original run function luigis_beta_mansion:room/gallery/portrait_battle/remove_blockade/original/bathroom
+execute if score #mansion_type Selected matches 2 if entity @s[scores={SelectedFrame=6}] in luigis_beta_mansion:original run function luigis_beta_mansion:room/gallery/portrait_battle/remove_blockade/original/bed_room_1
+execute if score #mansion_type Selected matches 2 if entity @s[scores={SelectedFrame=23}] in luigis_beta_mansion:original run function luigis_beta_mansion:room/gallery/portrait_battle/remove_blockade/original/boneyard

@@ -1,0 +1,1 @@
+execute if entity @s[x=748.5,y=20,z=70.5,distance=..0.7,tag=vacuum] unless score #childs_room_rocking_horse Search matches 1 store success score #childs_room_rocking_horse Search run scoreboard players add @e[tag=chauncey,tag=!fight,scores={Dialog=1..49},limit=1] Dialog 1

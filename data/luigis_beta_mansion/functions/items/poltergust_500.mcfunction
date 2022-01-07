@@ -1,0 +1,3 @@
+execute if score #poltergust_500 Selected matches 1 if entity @s[nbt={Inventory:[{tag:{luigis_mansion:{id:"luigis_beta_mansion:poltergust_500"}}}]}] run function luigis_beta_mansion:items/poltergust_500/tick
+execute if score #poltergust_500 Selected matches 0 if entity @s[nbt={Inventory:[{tag:{luigis_mansion:{id:"luigis_beta_mansion:poltergust_500"}}}]}] run function luigis_beta_mansion:items/poltergust_500/turn_to_poltergust_3000
+execute if score #poltergust_500 Selected matches 1 if entity @s[nbt={Inventory:[{tag:{luigis_mansion:{id:"luigis_beta_mansion:poltergust_500"}}}]},scores={Room=..0}] run function luigis_beta_mansion:items/poltergust_500/turn_to_poltergust_3000

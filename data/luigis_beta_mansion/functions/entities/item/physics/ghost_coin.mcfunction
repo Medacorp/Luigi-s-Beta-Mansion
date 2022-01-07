@@ -1,0 +1,1 @@
+execute if entity @s[tag=ghost_coin] run function luigis_mansion:entities/item/physics

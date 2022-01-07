@@ -1,0 +1,2 @@
+advancement grant @a only luigis_beta_mansion:lab/unlocked_original_mansion
+execute if entity @a[advancements={luigis_beta_mansion:lab/cleared_original_mansion=true},limit=1] run advancement grant @a only luigis_beta_mansion:lab/cleared_original_mansion

@@ -1,0 +1,3 @@
+#execute if data storage luigis_mansion:data current_state.current_data{data_index:2,data_version:1} run function luigis_beta_mansion:other/upgrade_path/current_data/
+#execute if data storage luigis_mansion:data current_state.mansion_data[{data_index:2,data_version:1}] run function luigis_beta_mansion:other/upgrade_path/current_state/
+#execute if data storage luigis_mansion:data saved_state.mansion_data[{data_index:2,data_version:1}] run function luigis_beta_mansion:other/upgrade_path/saved_state/

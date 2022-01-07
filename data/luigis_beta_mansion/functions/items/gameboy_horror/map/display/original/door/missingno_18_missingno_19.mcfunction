@@ -1,0 +1,2 @@
+setblock 3713 60 37 minecraft:structure_block[mode=load]{mode:"LOAD",name:"luigis_beta_mansion:gameboy_horror_map/door/single_locked",rotation:"CLOCKWISE_90"}
+setblock 3713 61 37 minecraft:redstone_block

@@ -1,0 +1,2 @@
+execute if score #living_room_candle_3 Searched matches 1 run setblock 714 21 26 minecraft:redstone_torch[lit=false]
+execute unless score #living_room_candle_3 Searched matches 1 run setblock 714 21 26 minecraft:redstone_torch[lit=true]

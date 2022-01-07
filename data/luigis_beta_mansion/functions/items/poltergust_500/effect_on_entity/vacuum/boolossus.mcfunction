@@ -1,0 +1,2 @@
+execute positioned ~ ~-1 ~ positioned as @s[tag=vacuumable,distance=..0.7,tag=boolossus,tag=fight,tag=split] positioned ~ ~1 ~ run function luigis_beta_mansion:items/poltergust_500/effect_on_entity/vacuum/effect/boolossus
+tag @s[distance=..0.7,tag=boolossus,tag=fight,tag=!split] add fleeing

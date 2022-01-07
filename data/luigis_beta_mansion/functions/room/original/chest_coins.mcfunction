@@ -1,0 +1,31 @@
+execute if score #gbh_clock Selected matches ..3600 run function luigis_beta_mansion:spawn_entities/item/ghost_coin
+execute if score #gbh_clock Selected matches ..7200 run function luigis_beta_mansion:spawn_entities/item/ghost_coin
+execute if score #gbh_clock Selected matches ..10800 run function luigis_beta_mansion:spawn_entities/item/ghost_coin
+execute if score #gbh_clock Selected matches ..14400 run function luigis_beta_mansion:spawn_entities/item/ghost_coin
+execute if score #gbh_clock Selected matches ..18000 run function luigis_beta_mansion:spawn_entities/item/ghost_coin
+execute if score #gbh_clock Selected matches ..21600 run function luigis_beta_mansion:spawn_entities/item/ghost_coin
+execute if score #gbh_clock Selected matches ..25200 run function luigis_beta_mansion:spawn_entities/item/ghost_coin
+execute if score #gbh_clock Selected matches ..28800 run function luigis_beta_mansion:spawn_entities/item/ghost_coin
+execute if score #gbh_clock Selected matches ..32400 run function luigis_beta_mansion:spawn_entities/item/ghost_coin
+execute if score #gbh_clock Selected matches ..36000 run function luigis_beta_mansion:spawn_entities/item/ghost_coin
+execute if score #gbh_clock Selected matches ..39600 run function luigis_beta_mansion:spawn_entities/item/ghost_coin
+execute if score #gbh_clock Selected matches ..43200 run function luigis_beta_mansion:spawn_entities/item/ghost_coin
+execute if score #gbh_clock Selected matches ..46800 run function luigis_beta_mansion:spawn_entities/item/ghost_coin
+execute if score #gbh_clock Selected matches ..50400 run function luigis_beta_mansion:spawn_entities/item/ghost_coin
+execute if score #gbh_clock Selected matches ..54000 run function luigis_beta_mansion:spawn_entities/item/ghost_coin
+execute if score #gbh_clock Selected matches ..57600 run function luigis_beta_mansion:spawn_entities/item/ghost_coin
+execute if score #gbh_clock Selected matches ..61200 run function luigis_beta_mansion:spawn_entities/item/ghost_coin
+execute if score #gbh_clock Selected matches ..64800 run function luigis_beta_mansion:spawn_entities/item/ghost_coin
+execute if score #gbh_clock Selected matches ..68400 run function luigis_beta_mansion:spawn_entities/item/ghost_coin
+execute if score #gbh_clock Selected matches ..72000 run function luigis_beta_mansion:spawn_entities/item/ghost_coin
+execute if score #gbh_clock Selected matches ..75600 run function luigis_beta_mansion:spawn_entities/item/ghost_coin
+execute if score #gbh_clock Selected matches ..79200 run function luigis_beta_mansion:spawn_entities/item/ghost_coin
+execute if score #gbh_clock Selected matches ..82800 run function luigis_beta_mansion:spawn_entities/item/ghost_coin
+execute if score #gbh_clock Selected matches ..86400 run function luigis_beta_mansion:spawn_entities/item/ghost_coin
+execute if score #gbh_clock Selected matches ..90000 run function luigis_beta_mansion:spawn_entities/item/ghost_coin
+execute if score #gbh_clock Selected matches ..93600 run function luigis_beta_mansion:spawn_entities/item/ghost_coin
+execute if score #gbh_clock Selected matches ..97200 run function luigis_beta_mansion:spawn_entities/item/ghost_coin
+execute if score #gbh_clock Selected matches ..100800 run function luigis_beta_mansion:spawn_entities/item/ghost_coin
+execute if score #gbh_clock Selected matches ..104400 run function luigis_beta_mansion:spawn_entities/item/ghost_coin
+function luigis_beta_mansion:spawn_entities/item/ghost_coin
+execute if data storage luigis_beta_mansion:data current_state.trophy{task_4:0b} if score #gbh_clock Selected matches 104401.. run function luigis_beta_mansion:room/gallery/clear_task/task_4
