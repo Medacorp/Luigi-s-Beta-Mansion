@@ -1,5 +1,3 @@
-scoreboard players set @e[tag=portrait_ghost] MushroomTimer -1
-execute if score #gbh_clock Selected matches 108000.. unless entity @a[tag=e_gadd_call,limit=1] run tag @r[scores={Room=0..},tag=!spectator] add e_gadd_call
 execute if entity @a[gamemode=!spectator,scores={Room=0}] in minecraft:overworld run function luigis_beta_mansion:room/original/door/boo_woods_entrance
 execute as @a[scores={Room=1..73},tag=!looking_at_map,tag=!warp,nbt={Dimension:"luigis_beta_mansion:original"}] at @s run function luigis_beta_mansion:room/original/floor_header
 execute as @a[gamemode=spectator,tag=!already_ticked,distance=0..,scores={HomeX=743..758,HomeY=9..26,HomeZ=-2..19}] at @s run function luigis_beta_mansion:room/original/entrance/spectator_tick
@@ -235,4 +233,6 @@ execute if score #missingno_57 Ticking matches 1 unless entity @a[gamemode=!spec
 execute if predicate luigis_mansion:lightning_strike_chance run function luigis_mansion:other/lightning_strike
 execute in minecraft:overworld if predicate luigis_mansion:lightning_strike_chance run function luigis_mansion:other/lightning_strike
 execute if data storage luigis_mansion:data {found_e_gadd:1b} if entity @a[scores={Room=1..},gamemode=!spectator] run function luigis_mansion:room/update_stats
+scoreboard players set @e[tag=portrait_ghost] MushroomTimer -1
+execute if score #gbh_clock Selected matches 108000.. unless entity @a[tag=e_gadd_call,limit=1] run tag @r[scores={Room=0..},tag=!spectator] add e_gadd_call
 scoreboard players set #temp Time 1

@@ -89,21 +89,26 @@ execute if entity @s[scores={Dialog=850},tag=ending] if score #players Totals ma
 execute if entity @s[scores={Dialog=850},tag=ending] if score #players Totals matches 2.. run tellraw @a[tag=same_room] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:entity.mansion","color":"green"},{"translate":"luigis_mansion:message.the_end.more"}]}
 execute if entity @s[scores={Dialog=1070},tag=ending] run tellraw @a[tag=same_room] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:entity.mansion","color":"green"},{"translate":"luigis_mansion:message.the_end.h_rank"}]}
 execute if entity @s[scores={Dialog=1070},tag=ending] run data modify storage luigis_mansion:data current_state.mansion_ranks_achieved.h set value 1b
-execute if entity @s[scores={Dialog=1070}] run function #luigis_mansion:cleared_mansion
-execute if entity @s[scores={Dialog=1070}] unless score #3ds_remake Loaded matches 1.. run function luigis_mansion:entities/mario/delete_mansion_data
-execute if entity @s[scores={Dialog=1070}] unless score #3ds_remake Loaded matches 1.. run scoreboard players set #mansion_type Selected -1
-execute if entity @s[scores={Dialog=1070}] unless score #3ds_remake Loaded matches 1.. run scoreboard players set #mansion_data_index Selected -1
-execute if entity @s[scores={Dialog=1070}] unless score #3ds_remake Loaded matches 1.. run scoreboard players set #previous_mansion_index Selected -1
-execute if entity @s[scores={Dialog=1070}] unless score #3ds_remake Loaded matches 1.. run tellraw @a[tag=same_room] {"translate":"luigis_mansion:message.save.yes","color":"green","clickEvent":{"action":"run_command","value":"/trigger EGaddGPRChoice set 1"},"extra":[{"text":"\n"},{"translate":"luigis_mansion:message.save.no","clickEvent":{"action":"run_command","value":"/trigger EGaddGPRChoice set 2"}}]}
-execute if entity @s[scores={Dialog=1070}] unless score #3ds_remake Loaded matches 1.. run scoreboard players enable @a[tag=same_room] EGaddGPRChoice
-execute if entity @s[scores={Dialog=1071}] unless score #3ds_remake Loaded matches 1.. unless entity @a[tag=same_room,limit=1] run scoreboard players set @s Dialog 1072
-execute if entity @s[scores={Dialog=1071}] if score #3ds_remake Loaded matches 1.. run scoreboard players set @s Dialog 1072
-execute if entity @s[scores={Dialog=1072}] unless score #3ds_remake Loaded matches 1.. as @a[scores={EGaddGPRChoice=1},limit=1] run function luigis_mansion:data/save
-execute if entity @s[scores={Dialog=1072}] unless score #3ds_remake Loaded matches 1.. run scoreboard players reset @a[tag=same_room] EGaddGPRChoice
-execute if entity @s[scores={Dialog=1072}] unless score #3ds_remake Loaded matches 1.. as @a[tag=same_room] unless entity @s[scores={MusicGroup=0,MusicType=40}] run function luigis_mansion:other/music/set/credits
+execute if entity @s[scores={Dialog=1070},tag=ending] run function #luigis_mansion:cleared_mansion
+execute if entity @s[scores={Dialog=1070},tag=ending] unless score #3ds_remake Loaded matches 1.. run function luigis_mansion:entities/mario/delete_mansion_data
+execute if entity @s[scores={Dialog=1070},tag=ending] unless score #3ds_remake Loaded matches 1.. run scoreboard players set #mansion_type Selected -1
+execute if entity @s[scores={Dialog=1070},tag=ending] unless score #3ds_remake Loaded matches 1.. run scoreboard players set #mansion_data_index Selected -1
+execute if entity @s[scores={Dialog=1070},tag=ending] unless score #3ds_remake Loaded matches 1.. run scoreboard players set #previous_mansion_index Selected -1
+execute if entity @s[scores={Dialog=1070},tag=ending] unless score #3ds_remake Loaded matches 1.. run tellraw @a[tag=same_room] {"translate":"luigis_mansion:message.save.yes","color":"green","clickEvent":{"action":"run_command","value":"/trigger EGaddGPRChoice set 1"},"extra":[{"text":"\n"},{"translate":"luigis_mansion:message.save.no","clickEvent":{"action":"run_command","value":"/trigger EGaddGPRChoice set 2"}}]}
+execute if entity @s[scores={Dialog=1070},tag=!ending] run tellraw @a[tag=same_room] {"translate":"luigis_mansion:message.save.yes","color":"green","clickEvent":{"action":"run_command","value":"/trigger EGaddGPRChoice set 1"},"extra":[{"text":"\n"},{"translate":"luigis_mansion:message.save.no","clickEvent":{"action":"run_command","value":"/trigger EGaddGPRChoice set 2"}}]}
+execute if entity @s[scores={Dialog=1070},tag=ending] unless score #3ds_remake Loaded matches 1.. run scoreboard players enable @a[tag=same_room] EGaddGPRChoice
+execute if entity @s[scores={Dialog=1070},tag=!ending] run scoreboard players enable @a[tag=same_room] EGaddGPRChoice
+execute if entity @s[scores={Dialog=1071},tag=ending] unless score #3ds_remake Loaded matches 1.. unless entity @a[tag=same_room,limit=1] run scoreboard players set @s Dialog 1072
+execute if entity @s[scores={Dialog=1071},tag=!ending] unless entity @a[tag=same_room,limit=1] run scoreboard players set @s Dialog 1072
+execute if entity @s[scores={Dialog=1071},tag=ending] if score #3ds_remake Loaded matches 1.. run scoreboard players set @s Dialog 1072
+execute if entity @s[scores={Dialog=1072},tag=ending] unless score #3ds_remake Loaded matches 1.. as @a[scores={EGaddGPRChoice=1},limit=1] run function luigis_mansion:data/save
+execute if entity @s[scores={Dialog=1072},tag=!ending] as @a[scores={EGaddGPRChoice=1},limit=1] run function luigis_mansion:data/save
+execute if entity @s[scores={Dialog=1072},tag=ending] unless score #3ds_remake Loaded matches 1.. run scoreboard players reset @a[tag=same_room] EGaddGPRChoice
+execute if entity @s[scores={Dialog=1072},tag=!ending] run scoreboard players reset @a[tag=same_room] EGaddGPRChoice
+execute if entity @s[scores={Dialog=1072},tag=ending] unless score #3ds_remake Loaded matches 1.. as @a[tag=same_room] unless entity @s[scores={MusicGroup=0,MusicType=40}] run function luigis_mansion:other/music/set/credits
 tag @s[scores={Dialog=1072}] remove portrificationizing
+execute if score #3ds_remake Loaded matches 1.. run tag @s[scores={Dialog=1072},tag=ending] add gooigi_results
 tag @s[scores={Dialog=1072}] remove ending
-execute if score #3ds_remake Loaded matches 1.. run tag @s[scores={Dialog=1072}] add gooigi_results
 execute if entity @s[scores={Dialog=1072}] run scoreboard players reset @a EGaddGPRChoice
 scoreboard players set @s[scores={Dialog=1072}] Dialog 0
 scoreboard players reset #temp Dialog
