@@ -46,6 +46,6 @@ execute if entity @s[scores={Dialog=701}] if score #3ds_remake Loaded matches 1.
 execute if entity @s[scores={Dialog=702}] unless score #3ds_remake Loaded matches 1.. as @a[scores={EGaddGPRChoice=1},limit=1] run function luigis_mansion:data/save
 execute if entity @s[scores={Dialog=702}] unless score #3ds_remake Loaded matches 1.. run scoreboard players reset @a[tag=same_room] EGaddGPRChoice
 execute if entity @s[scores={Dialog=702}] unless score #3ds_remake Loaded matches 1.. as @a[tag=same_room] unless entity @s[scores={MusicGroup=0,MusicType=40}] run function luigis_mansion:other/music/set/credits
-tag @s[scores={Dialog=702}] remove just_money
+tag @s[scores={Dialog=702}] remove just_money_dialog
 execute if score #3ds_remake Loaded matches 1.. run tag @s[scores={Dialog=702}] add gooigi_results
 scoreboard players set @s[scores={Dialog=702}] Dialog 0
