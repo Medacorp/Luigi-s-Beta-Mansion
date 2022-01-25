@@ -11,4 +11,4 @@ Official add-on for [Luigi's Mansion](https://github.com/Dhranios/Luigi-s-Mansio
 * Mansion type 2, known as the Original Mansion; based on the playable E3 demo.
 
 # Functions and tags of interest
-* `#luigis_beta_mansion:items/poltergust_500/` same contents `#luigis_mansion:items/poltergust_3000/`, exploding ice, fire and dust tags. Not parented for technical reasons.
+* `#luigis_beta_mansion:items/poltergust_500/` same contents as `#luigis_mansion:items/poltergust_3000/`, excluding ice, fire and dust related files. Not parented for technical reasons.
