@@ -22,7 +22,7 @@ execute if entity @s[scores={Dialog=458..473}] unless score #temp Money matches 
 execute if entity @s[scores={Dialog=478}] run function luigis_mansion:dialog/portrificationizing/get_total_score
 execute if entity @s[scores={Dialog=478}] if score #temp Money matches 1.. run tellraw @a[tag=same_room] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:entity.mansion","color":"green"},{"translate":"luigis_mansion:message.money.total","with":[{"score":{"objective":"Money","name":"#temp"}}]}]}
 execute if entity @s[scores={Dialog=478}] unless score #temp Money matches 1.. run tellraw @a[tag=same_room] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:entity.mansion","color":"green"},{"translate":"luigis_mansion:message.money.total.no_money"}]}
-execute if entity @s[scores={Dialog=478}] if data storage luigis_mansion:data current_data.high_scores[0] run function luigis_mansion:dialog/portrificationizing/get_high_score
+execute if entity @s[scores={Dialog=478}] if data storage luigis_mansion:data current_state.high_scores[0] run function luigis_mansion:dialog/portrificationizing/get_high_score
 execute if entity @s[scores={Dialog=478}] run scoreboard players operation #temp2 Money > #temp Money
 execute if entity @s[scores={Dialog=478}] run function luigis_mansion:dialog/portrificationizing/save_high_score
 execute if entity @s[scores={Dialog=478}] if score #temp2 Money matches 1.. run tellraw @a[tag=same_room] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:entity.mansion","color":"green"},{"translate":"luigis_mansion:message.money.high_score","with":[{"score":{"objective":"Money","name":"#temp2"}}]}]}

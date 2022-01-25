@@ -1,1 +1,2 @@
 execute if entity @s[tag=ghost_coin] run function luigis_mansion:entities/item/physics
+execute at @s[tag=ghost_coin] if predicate luigis_mansion:gold_coin_sparkle run particle minecraft:crit ~ ~ ~ 0.3 0.3 0.3 1 1 normal @a[tag=same_room]
