@@ -1,6 +1,8 @@
 summon minecraft:marker ~ ~ ~ {Tags:["interact","vacuum","poltergust"]}
 scoreboard players operation #temp Room = @s Room
 scoreboard players operation #temp ID = @s ID
+execute if entity @s[scores={MirrorX=-2147483648..}] run scoreboard players operation #temp MirrorX = @s MirrorX
+execute if entity @s[scores={MirrorZ=-2147483648..}] run scoreboard players operation #temp MirrorZ = @s MirrorZ
 tag @s add me
 execute as @e[tag=ghost,tag=same_room,scores={VulnerableTime=1..}] run function luigis_beta_mansion:items/poltergust_500/attacking_ghost
 execute if score #temp GhostCount > @s GhostCount run scoreboard players operation @s GhostCount = #temp GhostCount
@@ -31,6 +33,8 @@ execute if entity @s[scores={DamagePitch=5,DamagePitchTimer=6}] run playsound lu
 execute if entity @s[scores={DamagePitch=6..,DamagePitchTimer=6}] run playsound luigis_beta_mansion:item.poltergust_500.damage hostile @a ~ ~ ~ 1 2
 scoreboard players set @s[scores={DamagePitchTimer=0}] DamagePitch 0
 scoreboard players remove @s[scores={DamagePitchTimer=1..}] DamagePitchTimer 1
+scoreboard players reset #temp MirrorX
+scoreboard players reset #temp MirrorZ
 tag @s remove me
 tag @e[tag=already_hurt] remove already_hurt
 kill @e[type=minecraft:marker,tag=interact,limit=1]
