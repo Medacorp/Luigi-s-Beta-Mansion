@@ -14,8 +14,8 @@ teleport @s[scores={HomeX=682,HomeZ=-17..-16}] ~-1 ~ ~
 teleport @s[scores={HomeX=682,HomeZ=-40..-18}] ~7 ~-91 ~-39
 teleport @s[scores={HomeZ=-41}] ~ ~ ~1
 teleport @s[scores={HomeZ=37,HomeX=..673}] ~ ~ ~-1
-teleport @s[scores={HomeZ=37,HomeX=674..678}] ~ ~ ~2
-teleport @s[scores={HomeZ=37,HomeX=679..}] ~ ~ ~-1
+teleport @s[scores={HomeZ=37,HomeX=674..680}] ~ ~ ~2
+teleport @s[scores={HomeZ=37,HomeX=681}] ~ ~ ~-1
 
 teleport @s[scores={HomeY=118,HomeX=655..663,HomeZ=26..36}] ~-5 ~-94 ~-9
 teleport @s[scores={HomeY=118,HomeX=664..665,HomeZ=26..36}] ~ ~1 ~
