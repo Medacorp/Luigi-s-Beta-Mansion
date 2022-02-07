@@ -1,7 +1,8 @@
 {
     "display": {
         "icon": {
-            "item": "minecraft:glass_pane"
+            "item": "minecraft:diamond_pickaxe",
+            "nbt": "{Unbreakable:1b,Damage:1,CustomModelData:0}"
         },
         "show_toast": false,
         "hidden": false,

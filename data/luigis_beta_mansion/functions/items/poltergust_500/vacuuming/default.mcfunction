@@ -117,7 +117,7 @@ execute positioned ^0.9 ^ ^4.5 facing entity @s feet run function luigis_beta_ma
 execute positioned ^-0.9 ^ ^4.5 facing entity @s feet run function luigis_beta_mansion:items/poltergust_500/vacuum
 scoreboard players set @s GhostCount 0
 execute if entity @s[tag=!vacuuming] run playsound luigis_beta_mansion:item.poltergust_500.vacuuming_start player @a[tag=same_room] ~ ~ ~ 1
-scoreboard players set @s[tag=!vacuuming] Sound 20
-execute if entity @s[tag=vacuuming,scores={Sound=0}] run playsound luigis_beta_mansion:item.poltergust_500.vacuuming player @a[tag=same_room] ~ ~ ~ 1
-scoreboard players set @s[tag=vacuuming,scores={Sound=0}] Sound 20
+scoreboard players set @s[tag=!vacuuming] PoltergustSound 20
+execute if entity @s[tag=vacuuming,scores={PoltergustSound=0}] run playsound luigis_beta_mansion:item.poltergust_500.vacuuming player @a[tag=same_room] ~ ~ ~ 1
+scoreboard players set @s[tag=vacuuming,scores={PoltergustSound=0}] PoltergustSound 20
 tag @s remove was_clogged
