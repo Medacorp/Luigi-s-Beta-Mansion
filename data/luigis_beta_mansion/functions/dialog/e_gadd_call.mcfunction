@@ -19,4 +19,4 @@ execute if entity @s[scores={Dialog=218}] unless entity @a[tag=portrait_battle,l
 execute if entity @s[scores={Dialog=218}] run tag @a[tag=portrait_battle,limit=1] remove catching_the_portrait_ghost
 execute if entity @s[scores={Dialog=218}] run gamemode spectator @a[tag=portrait_battle,limit=1]
 tag @s[scores={Dialog=218}] remove e_gadd_call
-scoreboard players reset @s[scores={Dialog=218}] Dialog
+scoreboard players set @s[scores={Dialog=218}] Dialog 0
