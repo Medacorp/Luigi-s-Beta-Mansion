@@ -95,7 +95,7 @@ execute if entity @s[scores={Dialog=72}] positioned 725 20 34.9 run scoreboard p
 execute if entity @s[scores={Dialog=72}] positioned 725 20 34.9 run tag @e[distance=..0.1,tag=ghost] add dialog
 execute if entity @s[scores={Dialog=72}] run teleport @s 725.5 20 31.4 facing entity @e[tag=ghost,tag=dialog,limit=1] feet
 execute if entity @s[scores={Dialog=72}] run teleport @e[tag=ghost,tag=dialog,limit=1] 725 20 34.9 -180 0
-execute if entity @s[scores={Dialog=72}] as @a[tag=same_room] at @e[tag=ghost,tag=dialog,limit=1] run function luigis_mansion:entities/player/scare_bashed
+execute if entity @s[scores={Dialog=72}] as @a[tag=same_room] at @e[tag=ghost,tag=dialog,limit=1] run function luigis_mansion:entities/player/scare/bash
 scoreboard players set @s[scores={Dialog=72}] ScareType 3
 execute if entity @s[scores={Dialog=72..190}] run scoreboard players set @a[tag=same_room,scores={ScareTime=..20}] ScareTime 21
 execute if entity @s[scores={Dialog=72}] run tellraw @a[tag=same_room] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"luigis_beta_mansion:dialog.meet_e_gadd.1"}]}
