@@ -11,6 +11,6 @@ function #luigis_beta_mansion:room/original/bath_room/interactions/room
 
 clone 654 12 21 654 16 27 644 12 21
 
-function luigis_beta_mansion:room/original/bath_room/ghosts
+execute if entity @a[gamemode=!spectator,scores={Room=12}] run function luigis_beta_mansion:room/original/bath_room/ghosts
 
 function luigis_beta_mansion:room/original/door/hallway_6_bath_room

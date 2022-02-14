@@ -10,7 +10,7 @@ execute if entity @a[gamemode=!spectator,x=751.0,y=11,z=9.0,distance=..5] run ta
 
 function #luigis_beta_mansion:room/original/entrance/interactions/room
 
-function luigis_beta_mansion:room/original/entrance/ghosts
+execute if entity @a[gamemode=!spectator,scores={Room=1}] run function luigis_beta_mansion:room/original/entrance/ghosts
 
 function luigis_beta_mansion:room/original/door/boo_woods_entrance
 function luigis_beta_mansion:room/original/door/entrance_hallway_3

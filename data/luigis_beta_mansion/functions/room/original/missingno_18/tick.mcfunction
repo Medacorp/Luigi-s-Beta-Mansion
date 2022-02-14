@@ -7,7 +7,7 @@ execute as @a[gamemode=!spectator,scores={Room=34}] run function luigis_beta_man
 
 function #luigis_beta_mansion:room/original/missingno_18/interactions/room
 
-function luigis_beta_mansion:room/original/missingno_18/ghosts
+execute if entity @a[gamemode=!spectator,scores={Room=34},limit=1] run function luigis_beta_mansion:room/original/missingno_18/ghosts
 
 function luigis_beta_mansion:room/original/door/missingno_17_missingno_18
 function luigis_beta_mansion:room/original/door/missingno_18_missingno_19
