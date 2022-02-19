@@ -10,6 +10,9 @@ Official add-on for [Luigi's Mansion](https://github.com/Dhranios/Luigi-s-Mansio
 * Beta Shining Ghosts, Flying Fish, Boos, Body Slammers and Bashers
 * Mansion type 2, known as the Original Mansion; based on the playable E3 demo
 
+# Changes
+* "Open map when collecting a key" defaults to Off for new players
+
 # Functions and tags of interest
 * `#luigis_beta_mansion:items/poltergust_500/` same contents as `#luigis_mansion:items/poltergust_3000/`, excluding ice, fire and dust related files. Not parented for technical reasons.
 
