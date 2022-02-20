@@ -1,4 +1,3 @@
-data merge block 686 112 54 {Items:[]}
 setblock 687 112 55 minecraft:spruce_trapdoor[facing=east,half=bottom,open=true,powered=false]
 setblock 687 113 55 minecraft:spruce_trapdoor[facing=east,half=top,open=true,powered=false]
 fill 687 112 54 687 113 54 minecraft:air
