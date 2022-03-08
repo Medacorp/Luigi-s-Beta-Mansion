@@ -13,7 +13,7 @@ scoreboard players reset #temp Room
 function luigis_beta_mansion:animations/shining_ghost/bounce
 
 data modify entity @s[tag=visible] ArmorItems[3].id set value "minecraft:leather_chestplate"
-scoreboard players set #temp Move 1
+scoreboard players set #temp Move 5
 execute at @s[tag=visible] facing entity @e[tag=same_room,tag=!spectator,sort=nearest,limit=1] feet rotated ~ 0 run teleport @s ~ ~ ~ ~ ~
 execute at @s[tag=!fleeing,tag=move_up] rotated ~ 0 run function luigis_beta_mansion:entities/beta_shining_ghost/move_up
 execute at @s[tag=!fleeing,tag=!move_up] rotated ~ 0 run function luigis_beta_mansion:entities/beta_shining_ghost/move_down

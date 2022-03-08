@@ -25,8 +25,8 @@ execute at @s[tag=fleeing,tag=visible] run function luigis_mansion:animations/bo
 
 tag @s[tag=shy] add was_shy
 tag @s[tag=!shy] remove was_shy
-scoreboard players set #temp Move 1
-execute if entity @s[tag=fleeing] run scoreboard players set #temp Move 6
+scoreboard players set #temp Move 2
+execute if entity @s[tag=fleeing] run scoreboard players set #temp Move 12
 execute at @s[tag=visible,tag=fleeing] facing entity @e[tag=same_room,tag=!spectator,sort=nearest,limit=1] feet run teleport @s ~ ~ ~ ~-180 ~
 execute at @s[tag=visible,tag=fleeing] store result entity @s Rotation[1] float -1 run data get entity @s Rotation[1]
 execute at @s[tag=visible] unless entity @s[tag=shy,tag=!fleeing] run function luigis_beta_mansion:entities/beta_boo/move

@@ -26,7 +26,7 @@ scoreboard players reset #temp Room
 
 data modify entity @s[tag=visible] ArmorItems[3].id set value "minecraft:leather_chestplate"
 execute at @s[tag=!rotated,tag=visible] run function luigis_beta_mansion:entities/beta_mouse/move
-scoreboard players set #temp Move 2
+scoreboard players set #temp Move 10
 execute at @s[tag=rotated,tag=!squeek] rotated ~ 0 run function luigis_beta_mansion:entities/beta_mouse/move_forward
 execute if entity @s[tag=disappear,tag=!dead,tag=!squeek] run function luigis_beta_mansion:entities/beta_mouse/back_to_start
 execute at @s[tag=visible,tag=!squeek] run function luigis_mansion:animations/mouse/idle
