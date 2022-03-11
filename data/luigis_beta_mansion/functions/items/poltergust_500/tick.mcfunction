@@ -26,7 +26,7 @@ execute if entity @s[tag=poltergust_wall_sound,tag=gooigi,scores={Shrunk=1..}] r
 tag @s remove poltergust_floor_sound
 tag @s remove poltergust_wall_sound
 execute unless entity @s[tag=!exploding_poltergust,level=..299] run function luigis_beta_mansion:items/poltergust_500/explode
-tag @s[tag=!poltergust_malfunction,tag=!gameboy_horror,nbt={SelectedItem:{tag:{luigis_mansion:{id:"luigis_beta_mansion:poltergust_500"}}}}] add poltergust_selected
+execute unless entity @s[scores={IdleTime=..-1},tag=!idle] run tag @s[tag=!poltergust_malfunction,nbt={SelectedItem:{tag:{luigis_mansion:{id:"luigis_beta_mansion:poltergust_500"}}}}] add poltergust_selected
 tag @s[tag=!poltergust_selected] remove expelling
 experience add @s[tag=!poltergust_selected,level=1..] -1 levels
 scoreboard players set @s[tag=!poltergust_selected] VacuumErrors 0
