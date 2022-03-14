@@ -13,7 +13,6 @@ scoreboard players reset #temp ActionTime
 scoreboard players reset #temp Room
 
 data modify entity @s[tag=visible] ArmorItems[3].id set value "minecraft:leather_chestplate"
-scoreboard players set #temp Move 5
 execute if entity @s[tag=visible] run function luigis_beta_mansion:entities/beta_flying_fish/circle
 data modify entity @s Pose.Head[0] set from entity @s Rotation[1]
 execute at @s[tag=visible,scores={LightX=-2147483648..}] run function luigis_mansion:other/cast_shadow/1_tall
