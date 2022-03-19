@@ -1,5 +1,5 @@
 title @s[scores={Room=1}] title {"translate":"luigis_beta_mansion:location.entrance"}
-execute if score #3ds_remake Loaded matches 1.. run title @s[scores={Room=2}] title {"translate":"luigis_beta_mansion:location.hallway"}
+execute if score #3ds_remake Loaded matches 1.. run title @s[scores={Room=2}] title {"translate":"luigis_mansion:location.hallway"}
 title @s[scores={Room=3}] title {"translate":"luigis_beta_mansion:location.living_room"}
 execute if score #3ds_remake Loaded matches 1.. run title @s[scores={Room=4}] title {"translate":"luigis_mansion:location.hallway"}
 title @s[scores={Room=5}] title {"translate":"luigis_mansion:location.study"}

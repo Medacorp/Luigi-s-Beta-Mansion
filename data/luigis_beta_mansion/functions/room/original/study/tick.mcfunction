@@ -10,3 +10,7 @@ function #luigis_beta_mansion:room/original/study/interactions/room
 execute if entity @a[gamemode=!spectator,scores={Room=5},limit=1] run function luigis_beta_mansion:room/original/study/ghosts
 
 function luigis_beta_mansion:room/original/door/hallway_2_study
+
+execute store result score #temp Time run data get storage luigis_mansion:data current_state.current_data.rooms.study.time_spent_in
+execute if entity @a[gamemode=!spectator,scores={Room=5},limit=1] if data storage luigis_mansion:data current_state.current_data.rooms.study{cleared:0b} store result storage luigis_mansion:data current_state.current_data.rooms.study.time_spent_in int 1 run scoreboard players add #temp Time 1
+scoreboard players reset #temp Time

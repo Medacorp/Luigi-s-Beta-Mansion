@@ -14,3 +14,7 @@ clone 654 12 21 654 16 27 644 12 21
 execute if entity @a[gamemode=!spectator,scores={Room=12}] run function luigis_beta_mansion:room/original/bath_room/ghosts
 
 function luigis_beta_mansion:room/original/door/hallway_6_bath_room
+
+execute store result score #temp Time run data get storage luigis_mansion:data current_state.current_data.rooms.bath_room.time_spent_in
+execute if entity @a[gamemode=!spectator,scores={Room=12},limit=1] if data storage luigis_mansion:data current_state.current_data.rooms.bath_room{cleared:0b} store result storage luigis_mansion:data current_state.current_data.rooms.bath_room.time_spent_in int 1 run scoreboard players add #temp Time 1
+scoreboard players reset #temp Time

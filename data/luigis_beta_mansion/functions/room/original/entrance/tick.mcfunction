@@ -14,3 +14,7 @@ execute if entity @a[gamemode=!spectator,scores={Room=1}] run function luigis_be
 
 function luigis_beta_mansion:room/original/door/boo_woods_entrance
 function luigis_beta_mansion:room/original/door/entrance_hallway_3
+
+execute store result score #temp Time run data get storage luigis_mansion:data current_state.current_data.rooms.entrance.time_spent_in
+execute if data storage luigis_mansion:data {found_e_gadd:1b} if entity @a[gamemode=!spectator,scores={Room=1},limit=1] if data storage luigis_mansion:data current_state.current_data.rooms.entrance{cleared:0b} store result storage luigis_mansion:data current_state.current_data.rooms.entrance.time_spent_in int 1 run scoreboard players add #temp Time 1
+scoreboard players reset #temp Time

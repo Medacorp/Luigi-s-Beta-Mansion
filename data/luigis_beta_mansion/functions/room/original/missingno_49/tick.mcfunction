@@ -11,3 +11,7 @@ execute if entity @a[gamemode=!spectator,scores={Room=65},limit=1] run function 
 
 function luigis_beta_mansion:room/original/door/missingno_40_missingno_49
 function luigis_beta_mansion:room/original/door/missingno_49_missingno_50
+
+execute store result score #temp Time run data get storage luigis_mansion:data current_state.current_data.rooms.missingno_49.time_spent_in
+execute if entity @a[gamemode=!spectator,scores={Room=65},limit=1] if data storage luigis_mansion:data current_state.current_data.rooms.missingno_49{cleared:0b} store result storage luigis_mansion:data current_state.current_data.rooms.missingno_49.time_spent_in int 1 run scoreboard players add #temp Time 1
+scoreboard players reset #temp Time

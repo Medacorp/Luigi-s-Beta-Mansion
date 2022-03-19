@@ -32,5 +32,5 @@ scoreboard players set #temp Time 0
 function luigis_beta_mansion:room/gallery/interact_with_trophy/get_money_count/current_ghost_coin
 data modify storage luigis_mansion:data current_state.current_data.money_grabbed set from storage luigis_mansion:data current_state.current_data.new_money_grabbed
 data remove storage luigis_mansion:data current_state.current_data.new_money_grabbed
-execute if data storage luigis_beta_mansion:data current_state.trophy{task_5:0b} if score #temp Time matches 200 run function luigis_beta_mansion:room/gallery/clear_task/task_5
+execute if data storage luigis_beta_mansion:data current_state.trophy{task_5:0b} if score #temp Time matches 400 run function luigis_beta_mansion:room/gallery/clear_task/task_5
 scoreboard players reset #temp Time

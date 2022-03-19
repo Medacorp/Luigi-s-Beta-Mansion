@@ -18,3 +18,7 @@ execute if block 663 14 36 minecraft:oak_trapdoor[open=false] run setblock 659 1
 execute if entity @a[gamemode=!spectator,scores={Room=13}] run function luigis_beta_mansion:room/original/lavatory/ghosts
 
 function luigis_beta_mansion:room/original/door/hallway_5_lavatory
+
+execute store result score #temp Time run data get storage luigis_mansion:data current_state.current_data.rooms.lavatory.time_spent_in
+execute if entity @a[gamemode=!spectator,scores={Room=13},limit=1] if data storage luigis_mansion:data current_state.current_data.rooms.lavatory{cleared:0b} store result storage luigis_mansion:data current_state.current_data.rooms.lavatory.time_spent_in int 1 run scoreboard players add #temp Time 1
+scoreboard players reset #temp Time

@@ -10,3 +10,7 @@ function #luigis_beta_mansion:room/original/missingno_4/interactions/room
 execute if entity @a[gamemode=!spectator,scores={Room=20},limit=1] run function luigis_beta_mansion:room/original/missingno_4/ghosts
 
 function luigis_beta_mansion:room/original/door/missingno_4_missingno_22
+
+execute store result score #temp Time run data get storage luigis_mansion:data current_state.current_data.rooms.missingno_4.time_spent_in
+execute if entity @a[gamemode=!spectator,scores={Room=20},limit=1] if data storage luigis_mansion:data current_state.current_data.rooms.missingno_4{cleared:0b} store result storage luigis_mansion:data current_state.current_data.rooms.missingno_4.time_spent_in int 1 run scoreboard players add #temp Time 1
+scoreboard players reset #temp Time

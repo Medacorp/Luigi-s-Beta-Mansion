@@ -15,3 +15,7 @@ function luigis_beta_mansion:room/original/door/hallway_3_dining_room
 function luigis_beta_mansion:room/original/door/hallway_3_missingno_12
 function luigis_beta_mansion:room/original/door/hallway_3_missingno_15
 function luigis_beta_mansion:room/original/door/hallway_3_missingno_17
+
+execute store result score #temp Time run data get storage luigis_mansion:data current_state.current_data.rooms.hallway_3.time_spent_in
+execute if entity @a[gamemode=!spectator,scores={Room=8},limit=1] if data storage luigis_mansion:data current_state.current_data.rooms.hallway_3{cleared:0b} store result storage luigis_mansion:data current_state.current_data.rooms.hallway_3.time_spent_in int 1 run scoreboard players add #temp Time 1
+scoreboard players reset #temp Time
