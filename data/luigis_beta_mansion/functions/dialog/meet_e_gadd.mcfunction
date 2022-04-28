@@ -11,8 +11,8 @@ scoreboard players set @s[scores={Dialog=1}] Sound 60
 execute if entity @s[scores={Dialog=1..81}] run stopsound @a[tag=same_room,gamemode=!spectator] music
 execute if entity @s[scores={Dialog=1..81}] as @a[tag=same_room,gamemode=!spectator] run function luigis_mansion:other/music/set/non_overwritten_silence
 execute if entity @s[scores={Dialog=1..81}] run scoreboard players set @a[tag=same_room,gamemode=!spectator] Music 1308
-execute if entity @s[scores={Dialog=81}] run playsound luigis_mansion:music.meet_e_gadd music @a[tag=same_room,gamemode=!spectator] ~ ~ ~ 1000
-teleport @s[x=697,y=20,z=7,dx=1,dy=1,dz=1] ~-1 ~ ~
+execute if entity @s[scores={Dialog=81}] run playsound luigis_beta_mansion:music.meet_e_gadd music @a[tag=same_room,gamemode=!spectator] ~ ~ ~ 1000
+teleport @s[x=727.0,y=20.0,z=27.0,dx=1,dy=1,dz=1] ~-1 ~ ~
 execute if entity @s[scores={Dialog=1}] run teleport @s 725.5 20 28.0 90 0
 execute if entity @s[scores={Dialog=2}] run teleport @s 725.5 20 28.0 90 0
 execute if entity @s[scores={Dialog=3}] run teleport @s 725.5 20 28.0 90 0

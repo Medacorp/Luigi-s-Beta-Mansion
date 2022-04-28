@@ -1,5 +1,5 @@
 execute if entity @s[scores={Dialog=1}] run stopsound @a[tag=same_room] music
-execute if entity @s[scores={Dialog=1}] run playsound luigis_mansion:music.first_key music @a[tag=same_room] ~ ~ ~ 1000
+execute if entity @s[scores={Dialog=1}] run playsound luigis_beta_mansion:music.first_key music @a[tag=same_room] ~ ~ ~ 1000
 execute if entity @s[scores={Dialog=1}] run scoreboard players set @a[tag=same_room] Music 470
 item replace entity @s[scores={Dialog=1}] armor.head with minecraft:brick{CustomModelData:1}
 scoreboard players add @s Dialog 1

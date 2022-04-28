@@ -7,7 +7,11 @@ execute as @a[gamemode=!spectator,scores={Room=29}] run function luigis_beta_man
 
 function #luigis_beta_mansion:room/original/missingno_13/interactions/room
 
-execute if entity @a[gamemode=!spectator,scores={Room=29},limit=1] run function luigis_beta_mansion:room/original/missingno_13/ghosts
+scoreboard players set #temp Room 29
+execute as @a[gamemode=!spectator] run function #luigis_mansion:get_same_room
+scoreboard players reset #temp Room
+execute if entity @a[tag=same_room,limit=1] run function luigis_beta_mansion:room/original/missingno_13/ghosts
+tag @a[tag=same_room] remove same_room
 
 function luigis_beta_mansion:room/original/door/hallway_4_missingno_13
 function luigis_beta_mansion:room/original/door/missingno_13_missingno_14

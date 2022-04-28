@@ -40,5 +40,7 @@ tag @s[tag=poltergust_selected,scores={UseItem=1},tag=expelling] remove expellin
 scoreboard players set @s[scores={UseItem=1},tag=poltergust_selected] UseItem 0
 execute if entity @s[tag=!expelling,tag=poltergust_selected] positioned ~ ~0.5 ~ run function luigis_beta_mansion:items/poltergust_500/vacuuming
 execute if entity @s[tag=expelling,tag=poltergust_selected] positioned ~ ~0.5 ~ run function luigis_beta_mansion:items/poltergust_500/expelling
+execute if entity @s[tag=vaporizing_ghost] as @e[tag=captured,tag=element_death] at @s run function luigis_beta_mansion:items/poltergust_500/vaporize
+tag @s remove vaporizing_ghost
 scoreboard players set @s[tag=!vacuuming_ghost] GhostCount 0
 scoreboard players set @s[tag=!vacuuming_ghost] Pull 0
