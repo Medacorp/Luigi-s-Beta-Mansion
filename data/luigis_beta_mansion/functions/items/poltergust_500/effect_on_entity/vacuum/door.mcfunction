@@ -1,0 +1,1 @@
+tag @s[tag=door] add in_vacuum
