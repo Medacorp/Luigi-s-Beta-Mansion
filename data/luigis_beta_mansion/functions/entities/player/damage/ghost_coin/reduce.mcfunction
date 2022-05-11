@@ -1,6 +1,6 @@
-execute store result storage luigis_mansion:data current_state.my_money_data.money.ghost_coin int 1 run scoreboard players get #temp ActionTime
+execute store result storage luigis_mansion:data current_state.my_money_data.money.luigis_beta_mansion.ghost_coin int 1 run scoreboard players get #temp ActionTime
 scoreboard players operation #temp2 ActionTime += #temp ActionTime
-execute store result storage luigis_mansion:data current_state.my_money.money.ghost_coin int 1 run scoreboard players get #temp2 ActionTime
+execute store result storage luigis_mansion:data current_state.my_money.money.luigis_beta_mansion.ghost_coin int 1 run scoreboard players get #temp2 ActionTime
 scoreboard players operation #temp ActionTime *= #5 Constants
 scoreboard players operation #temp2 ActionTime *= #5 Constants
 scoreboard players operation #temp Money += #temp ActionTime
