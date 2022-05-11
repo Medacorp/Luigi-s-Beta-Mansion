@@ -1,4 +1,3 @@
-execute if entity @a[scores={Room=0}] in minecraft:overworld run function luigis_beta_mansion:room/original/door/boo_woods_entrance
 execute as @a[scores={Room=1..73},tag=!looking_at_map,tag=!warp,nbt={Dimension:"luigis_beta_mansion:original"}] at @s run function luigis_beta_mansion:room/original/floor_header
 execute as @a[gamemode=spectator,tag=!already_ticked,distance=0..,scores={HomeX=743..758,HomeY=9..26,HomeZ=-2..19}] at @s run function luigis_beta_mansion:room/original/entrance/spectator_tick
 execute if entity @a[x=735,y=11,z=-2,dx=21,dy=15,dz=21] run function luigis_beta_mansion:room/original/entrance/tick
