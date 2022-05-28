@@ -1,4 +1,3 @@
-execute if entity @a[scores={Room=0}] in minecraft:overworld run function luigis_beta_mansion:room/original/door/boo_woods_entrance
 execute as @a[scores={Room=1..73},tag=!looking_at_map,tag=!warp,nbt={Dimension:"luigis_beta_mansion:original"}] at @s run function luigis_beta_mansion:room/original/floor_header
 execute as @a[gamemode=spectator,tag=!already_ticked,distance=0..,scores={HomeX=743..758,HomeY=9..26,HomeZ=-2..19}] at @s run function luigis_beta_mansion:room/original/entrance/spectator_tick
 execute if entity @a[x=735,y=11,z=-2,dx=21,dy=15,dz=21] run function luigis_beta_mansion:room/original/entrance/tick
@@ -169,8 +168,8 @@ execute as @a[gamemode=spectator,tag=!already_ticked,distance=0..,scores={HomeX=
 execute if entity @a[x=654,y=120,z=-41,dx=28,dy=22,dz=78] run function luigis_beta_mansion:room/original/missingno_37/tick
 execute if score #missingno_37 Ticking matches 1 unless entity @a[x=654,y=120,z=-41,dx=28,dy=22,dz=78] unless entity @a[scores={Room=53}] run function luigis_beta_mansion:room/original/missingno_37/not_ticking
 execute as @a[gamemode=spectator,tag=!already_ticked,distance=0..,scores={HomeX=673..681,HomeY=118..126,HomeZ=38..44}] at @s run function luigis_beta_mansion:room/original/missingno_38/spectator_tick
-execute if entity @a[x=673,y=120,z=38,dx=48,dy=6,dz=18] run function luigis_beta_mansion:room/original/missingno_38/tick
-execute if score #missingno_38 Ticking matches 1 unless entity @a[x=673,y=120,z=38,dx=48,dy=6,dz=18] unless entity @a[scores={Room=54}] run function luigis_beta_mansion:room/original/missingno_38/not_ticking
+execute if entity @a[x=673,y=120,z=38,dx=11,dy=6,dz=8] run function luigis_beta_mansion:room/original/missingno_38/tick
+execute if score #missingno_38 Ticking matches 1 unless entity @a[x=673,y=120,z=38,dx=11,dy=6,dz=8] unless entity @a[scores={Room=54}] run function luigis_beta_mansion:room/original/missingno_38/not_ticking
 execute as @a[gamemode=spectator,tag=!already_ticked,distance=0..,scores={HomeX=723..739,HomeY=27..35,HomeZ=40..48}] at @s run function luigis_beta_mansion:room/original/missingno_39/spectator_tick
 execute if entity @a[x=723,y=29,z=40,dx=36,dy=6,dz=8] run function luigis_beta_mansion:room/original/missingno_39/tick
 execute if score #missingno_39 Ticking matches 1 unless entity @a[x=723,y=29,z=40,dx=36,dy=6,dz=8] unless entity @a[scores={Room=55}] run function luigis_beta_mansion:room/original/missingno_39/not_ticking

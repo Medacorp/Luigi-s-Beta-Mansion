@@ -9,16 +9,10 @@ execute as @a[gamemode=!spectator,scores={Room=8}] run function luigis_beta_mans
 function #luigis_beta_mansion:room/original/hallway_3/interactions/room
 
 scoreboard players set #temp Room 8
-execute as @a[gamemode=!spectator] run function #luigis_mansion:get_same_room
+execute as @a[gamemode=!spectator,tag=!pull_open_door,tag=!push_open_door] run function #luigis_mansion:get_same_room
 scoreboard players reset #temp Room
 execute if entity @a[tag=same_room,limit=1] run function luigis_beta_mansion:room/original/hallway_3/ghosts
 tag @a[tag=same_room] remove same_room
-
-function luigis_beta_mansion:room/original/door/entrance_hallway_3
-function luigis_beta_mansion:room/original/door/hallway_3_dining_room
-function luigis_beta_mansion:room/original/door/hallway_3_missingno_12
-function luigis_beta_mansion:room/original/door/hallway_3_missingno_15
-function luigis_beta_mansion:room/original/door/hallway_3_missingno_17
 
 execute store result score #temp Time run data get storage luigis_mansion:data current_state.current_data.rooms.hallway_3.time_spent_in
 execute if entity @a[gamemode=!spectator,scores={Room=8},limit=1] if data storage luigis_mansion:data current_state.current_data.rooms.hallway_3{cleared:0b} store result storage luigis_mansion:data current_state.current_data.rooms.hallway_3.time_spent_in int 1 run scoreboard players add #temp Time 1

@@ -11,11 +11,11 @@ execute unless entity @e[type=minecraft:armor_stand,tag=key,tag=living_room,limi
 
 function #luigis_beta_mansion:room/original/hallway_1/interactions/room
 
-function luigis_beta_mansion:room/original/hallway_1/ghosts
-
-function luigis_beta_mansion:room/original/door/hallway_1_living_room
-function luigis_beta_mansion:room/original/door/hallway_1_hallway_2
-function luigis_beta_mansion:room/original/door/hallway_1_missingno_9
+scoreboard players set #temp Room 2
+execute as @a[gamemode=!spectator,tag=!pull_open_door,tag=!push_open_door] run function #luigis_mansion:get_same_room
+scoreboard players reset #temp Room
+execute if entity @a[tag=same_room,limit=1] run function luigis_beta_mansion:room/original/hallway_1/ghosts
+tag @a[tag=same_room] remove same_room
 
 execute store result score #temp Time run data get storage luigis_mansion:data current_state.current_data.rooms.hallway_1.time_spent_in
 execute if data storage luigis_mansion:data {found_e_gadd:1b} if entity @a[gamemode=!spectator,scores={Room=2},limit=1] if data storage luigis_mansion:data current_state.current_data.rooms.hallway_1{cleared:0b} store result storage luigis_mansion:data current_state.current_data.rooms.hallway_1.time_spent_in int 1 run scoreboard players add #temp Time 1
