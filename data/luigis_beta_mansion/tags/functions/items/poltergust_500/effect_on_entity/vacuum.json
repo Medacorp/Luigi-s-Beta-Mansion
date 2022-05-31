@@ -40,6 +40,8 @@
         "luigis_beta_mansion:items/poltergust_500/effect_on_entity/vacuum/ghost",
         "luigis_beta_mansion:items/poltergust_500/effect_on_entity/vacuum/banana_peel",
         "luigis_beta_mansion:items/poltergust_500/effect_on_entity/vacuum/vacuumable_object",
+        "luigis_beta_mansion:items/poltergust_500/effect_on_entity/vacuum/door",
+        "luigis_beta_mansion:items/poltergust_500/effect_on_entity/vacuum/cobweb",
         "luigis_beta_mansion:items/poltergust_500/effect_on_entity/vacuum/gameboy_horror_part",
         "luigis_beta_mansion:items/poltergust_500/effect_on_entity/vacuum/super_mushroom",
 		"luigis_beta_mansion:items/poltergust_500/effect_on_entity/vacuum/ghost_coin",
