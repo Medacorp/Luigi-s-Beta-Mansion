@@ -1,1 +1,1 @@
-execute positioned ~ ~-1 ~ run tag @s[tag=!billiards_ball,tag=ball,tag=!big,tag=!spit,tag=vacuumable,distance=..0.7,scores={Move=0}] add in_vacuum
+execute if entity @s[tag=ball,tag=vacuumable] run function #luigis_beta_mansion:items/poltergust_500/effect_on_entity/vacuum/ball
