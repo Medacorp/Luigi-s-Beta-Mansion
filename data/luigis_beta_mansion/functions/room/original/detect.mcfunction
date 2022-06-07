@@ -231,7 +231,6 @@ execute if score #missingno_57 Ticking matches 1 unless entity @a[x=635,y=91,z=-
 
 execute if predicate luigis_mansion:lightning_strike_chance run function luigis_mansion:other/lightning_strike
 execute in minecraft:overworld if predicate luigis_mansion:lightning_strike_chance run function luigis_mansion:other/lightning_strike
-execute if data storage luigis_mansion:data {found_e_gadd:1b} if entity @a[scores={Room=1..},gamemode=!spectator] run function luigis_mansion:room/update_stats
 tag @e[tag=portrait_ghost] add no_poison_mushroom_dropping
 execute if score #gbh_clock Selected matches 108000.. unless entity @a[tag=e_gadd_call,limit=1] run tag @r[scores={Room=0..},tag=!spectator] add e_gadd_call
 scoreboard players set #temp Time 1

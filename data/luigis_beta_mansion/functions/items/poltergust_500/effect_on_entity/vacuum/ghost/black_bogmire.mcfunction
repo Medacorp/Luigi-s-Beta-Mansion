@@ -1,1 +1,1 @@
-tag @s[tag=black_bogmire,distance=..0.7] add in_vacuum
+execute if entity @s[tag=black_bogmire] run function luigis_beta_mansion:items/poltergust_500/effect_on_entity/vacuum/effect/ghost/black_bogmire

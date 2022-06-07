@@ -23,7 +23,10 @@ scoreboard players set @s Room 0
 scoreboard players set @s KnockbackType 0
 scoreboard players set @s Shrunk 0
 scoreboard players set @s Dialog 0
+scoreboard players set @s FlashlightType 0
+scoreboard players set @s GBHDoubleUse 2
 gamemode adventure @s
+title @s times 40 40 40
 tag @s add joined
 tag @s add fix_health
 tag @s add stop_map_on_key_collect
