@@ -1,1 +1,1 @@
-execute positioned ~ ~-1 ~ positioned as @s[tag=banana_peel,tag=vacuumable,distance=..0.7] positioned ~ ~1 ~ run function luigis_beta_mansion:items/poltergust_500/effect_on_entity/vacuum/effect/banana_peel
+execute positioned as @s[tag=banana_peel,tag=vacuumable,distance=..0.7] positioned ~ ~0.6 ~ run function luigis_beta_mansion:items/poltergust_500/effect_on_entity/vacuum/effect/banana_peel
