@@ -8,7 +8,7 @@ execute positioned 704 11 57 rotated -180 0 run function luigis_mansion:spawn_fu
 execute positioned 704 11 57 rotated -180 0 run function luigis_mansion:spawn_furniture/door_frame/double_light_wood
 execute positioned 698 11 52 rotated -90 0 run function luigis_mansion:spawn_furniture/door/left/pull/mansion/2
 execute positioned 698 11 52 rotated -90 0 run function luigis_mansion:spawn_furniture/door_frame/light_wood
-tag @e[x=699.0,y=11,z=52.5,distance=..0.7,type=minecraft:villager,tag=door,limit=1] add barricade
+tag @e[x=699.0,y=11,z=52.5,distance=..0.7,tag=door,tag=frame,limit=1] add barricade
 execute positioned 698 11 34 rotated -90 0 run function luigis_mansion:spawn_furniture/door/left/pull/mansion/2
 execute positioned 698 11 34 rotated -90 0 run function luigis_mansion:spawn_furniture/door_frame/light_wood
-tag @e[x=699.0,y=11,z=34.5,distance=..0.7,type=minecraft:villager,tag=door,limit=1] add barricade
+tag @e[x=699.0,y=11,z=34.5,distance=..0.7,tag=door,tag=frame,limit=1] add barricade
