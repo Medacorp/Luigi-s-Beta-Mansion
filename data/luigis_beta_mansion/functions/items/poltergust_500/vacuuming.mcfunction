@@ -4,15 +4,19 @@ scoreboard players operation #temp ID = @s ID
 execute if entity @s[scores={MirrorX=-2147483648..}] run scoreboard players operation #temp MirrorX = @s MirrorX
 execute if entity @s[scores={MirrorZ=-2147483648..}] run scoreboard players operation #temp MirrorZ = @s MirrorZ
 tag @s add me
+tag @s remove capturing_ghost
+scoreboard players set @s[scores={ErrorTime=0}] Pull 0
+scoreboard players set @s[tag=capturing_ghost] Invulnerable 2
 execute as @e[tag=ghost,tag=same_room,scores={VulnerableTime=1..}] run function luigis_beta_mansion:items/poltergust_500/attacking_ghost
 execute if score #temp GhostCount > @s GhostCount run scoreboard players operation @s GhostCount = #temp GhostCount
 execute if score #temp GhostCount matches 1.. run function luigis_beta_mansion:items/poltergust_500/get_old_position
 execute if score #temp GhostCount matches 1.. at @s rotated ~ 0 run function luigis_beta_mansion:items/poltergust_500/vacuuming/attack_ghost
+execute if score #temp GhostCount matches 1.. run function luigis_beta_mansion:items/poltergust_500/face_ghost
+execute if score #temp GhostCount matches 1.. at @e[tag=ghost,tag=being_vacuumed,scores={ErrorTime=10..}] run function luigis_beta_mansion:items/poltergust_500/vacuuming/made_error
 execute if score #temp GhostCount matches 1.. as @e[tag=ghost,tag=being_vacuumed] facing entity @s feet run function luigis_beta_mansion:items/poltergust_500/vacuuming/ghost
-execute if score #temp GhostCount matches 1.. run tag @s[tag=is_pulling] remove made_error
 execute if score #temp GhostCount matches 1.. run scoreboard players set @s[tag=is_pulling] ErrorTime 0
 execute if score #temp GhostCount matches 1.. run scoreboard players add @s[tag=!is_pulling] ErrorTime 1
-execute if score #temp GhostCount matches 1.. if entity @s[scores={ErrorTime=10..}] run function luigis_beta_mansion:items/poltergust_500/vacuuming/made_error
+execute if score #temp GhostCount matches 1.. if entity @s[scores={ErrorTime=10..}] run function luigis_beta_mansion:items/poltergust_500/vacuuming/get_dragged
 execute unless score #temp GhostCount matches 1.. run tag @s remove made_error
 execute unless score #temp GhostCount matches 1.. run scoreboard players set @s VacuumErrors 0
 execute unless score #temp GhostCount matches 1.. run scoreboard players set @s ErrorTime 0
@@ -26,7 +30,6 @@ scoreboard players reset #temp ID
 experience add @s 1 levels
 tag @s add vacuuming
 tag @s remove expelling_water
-scoreboard players set @s[tag=!made_error] Pull 0
 execute if entity @s[scores={DamagePitch=1,DamagePitchTimer=6}] run playsound luigis_beta_mansion:item.poltergust_500.damage hostile @a ~ ~ ~ 1 1
 execute if entity @s[scores={DamagePitch=2,DamagePitchTimer=6}] run playsound luigis_beta_mansion:item.poltergust_500.damage hostile @a ~ ~ ~ 1 1.2
 execute if entity @s[scores={DamagePitch=3,DamagePitchTimer=6}] run playsound luigis_beta_mansion:item.poltergust_500.damage hostile @a ~ ~ ~ 1 1.4
