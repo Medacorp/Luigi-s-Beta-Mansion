@@ -27,7 +27,9 @@ execute as @e[distance=..3,tag=captured,tag=!element_death] at @s run function l
 scoreboard players reset #temp GhostCount
 scoreboard players reset #temp Room
 scoreboard players reset #temp ID
-experience add @s 1 levels
+scoreboard players add @s OverheatMeter 1
+function luigis_beta_mansion:items/poltergust_500/sync_overheat_meter
+execute if entity @s[tag=!exploding_poltergust,scores={OverheatMeter=300..}] run function luigis_beta_mansion:items/poltergust_500/explode
 tag @s add vacuuming
 tag @s remove expelling_water
 execute if entity @s[scores={DamagePitch=1,DamagePitchTimer=6}] run playsound luigis_beta_mansion:item.poltergust_500.damage hostile @a ~ ~ ~ 1 1

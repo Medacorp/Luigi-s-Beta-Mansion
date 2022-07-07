@@ -1,10 +1,3 @@
-tag @s[tag=!poltergust_selected] remove expelling_dust
-tag @s[tag=!poltergust_selected] remove expelling_fire
-tag @s[tag=!poltergust_selected] remove expelling_water
-tag @s[tag=!poltergust_selected] remove expelling_ice
-tag @s[tag=expelling_dust] remove expelling_fire
-tag @s[tag=expelling_dust] remove expelling_water
-tag @s[tag=expelling_dust] remove expelling_ice
 tag @s[tag=!poltergust_selected] remove vacuuming
 tag @s[tag=!poltergust_selected] remove was_clogged
 tag @s[tag=!capturing_ghost] remove poltergust_selected
@@ -24,10 +17,8 @@ execute if entity @s[tag=poltergust_floor_sound,tag=gooigi,scores={Shrunk=1..}] 
 execute if entity @s[tag=poltergust_wall_sound,tag=gooigi,scores={Shrunk=1..}] run playsound luigis_beta_mansion:item.poltergust_500.hit_wall_gooigi player @a[tag=same_room] ~ ~ ~ 1 2
 tag @s remove poltergust_floor_sound
 tag @s remove poltergust_wall_sound
-execute unless entity @s[tag=!exploding_poltergust,level=..299] run function luigis_beta_mansion:items/poltergust_500/explode
 execute unless entity @s[scores={IdleTime=..-1},tag=!idle] run tag @s[tag=!poltergust_malfunction,nbt={SelectedItem:{tag:{luigis_mansion:{id:"luigis_beta_mansion:poltergust_500"}}}}] add poltergust_selected
 tag @s[tag=!poltergust_selected] remove expelling
-experience add @s[tag=!poltergust_selected,level=1..] -1 levels
 scoreboard players set @s[tag=!poltergust_selected] VacuumErrors 0
 scoreboard players set @s[tag=!poltergust_selected] Pull 0
 tag @s[tag=!poltergust_selected] remove made_error
