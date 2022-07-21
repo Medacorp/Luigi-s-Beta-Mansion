@@ -1,3 +1,3 @@
-scoreboard players set @s MusicType 3
-scoreboard players set @s Music 0
-scoreboard players set @s MusicGroup 2
+function #luigis_beta_mansion:other/music/cannot_overwrite/light
+execute if entity @s[tag=!cancel] run function luigis_beta_mansion:other/music/set/force/light
+tag @s remove cancel

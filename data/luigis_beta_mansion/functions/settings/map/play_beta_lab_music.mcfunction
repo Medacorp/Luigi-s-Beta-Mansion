@@ -5,6 +5,5 @@ tellraw @s[scores={SettingsCheck=5},tag=!play_old_lab_music] {"translate":"chat.
 tellraw @s[scores={SettingsCheck=5},tag=play_old_lab_music] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:entity.mansion","color":"green"},{"translate":"luigis_beta_mansion:settings.modified.play_beta_lab_music","with":[{"translate":"luigis_mansion:settings.on"}],"color":"green","clickEvent":{"action":"run_command","value":"/trigger SettingsCheck set 5"}}]}
 tag @s[scores={SettingsCheck=5},tag=!play_old_lab_music] add toggle_play_old_lab_music
 tag @s[tag=toggle_play_old_lab_music] add play_old_lab_music
-scoreboard players reset @s[tag=toggle_play_old_lab_music] SettingsCheck
+tag @s[scores={SettingsCheck=5},tag=!toggle_play_old_lab_music,tag=play_old_lab_music] remove play_old_lab_music
 tag @s[tag=toggle_play_old_lab_music] remove toggle_play_old_lab_music
-tag @s[scores={SettingsCheck=5},tag=play_old_lab_music] remove play_old_lab_music
