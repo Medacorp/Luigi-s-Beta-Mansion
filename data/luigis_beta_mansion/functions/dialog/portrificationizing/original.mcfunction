@@ -90,6 +90,7 @@ execute if entity @s[scores={Dialog=1070},tag=ending] unless score #3ds_remake L
 execute if entity @s[scores={Dialog=1070},tag=!ending] run tellraw @a[tag=same_room] {"translate":"luigis_mansion:message.save.yes","color":"green","clickEvent":{"action":"run_command","value":"/trigger EGaddGPRChoice set 1"},"extra":[{"text":"\n"},{"translate":"luigis_mansion:message.save.no","clickEvent":{"action":"run_command","value":"/trigger EGaddGPRChoice set 2"}}]}
 execute if entity @s[scores={Dialog=1070},tag=ending] unless score #3ds_remake Loaded matches 1.. run scoreboard players enable @a[tag=same_room] EGaddGPRChoice
 execute if entity @s[scores={Dialog=1070},tag=!ending] run scoreboard players enable @a[tag=same_room] EGaddGPRChoice
+execute if entity @s[scores={Dialog=1070},tag=ending] unless score #3ds_remake Loaded matches 1.. run tag @a add show_credits
 execute if entity @s[scores={Dialog=1071},tag=ending] unless score #3ds_remake Loaded matches 1.. unless entity @a[tag=same_room,limit=1] run scoreboard players set @s Dialog 1072
 execute if entity @s[scores={Dialog=1071},tag=!ending] unless entity @a[tag=same_room,limit=1] run scoreboard players set @s Dialog 1072
 execute if entity @s[scores={Dialog=1071},tag=ending] if score #3ds_remake Loaded matches 1.. run scoreboard players set @s Dialog 1072
